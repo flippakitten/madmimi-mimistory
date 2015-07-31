@@ -13,11 +13,8 @@
     include('includes/style-color.html');
     $mimi = new MadMimi($cleanUserName, $cleanApi_key);
     $promotions = new SimpleXMLElement($mimi->Promotions());
-
-    foreach ($promotions as $promotion) {
-        if ($promotion['hidden'] == 'false'){
-        ?>
-        <style type="text/css">
+    ?>
+    <style type="text/css">
             BODY{
                 font-family: sans-serif;
                 font-size:12px;
@@ -49,6 +46,10 @@
                 text-decoration:none;
             }
         </style>
+    <?php
+    foreach ($promotions as $promotion) {
+        if ($promotion['hidden'] == 'false'){
+        ?>
             <div id="promotionsDiv">
                 <img src="<?php echo $promotion['thumbnail']; ?>" alt="<?php echo $promotion['thumbnail']; ?>" />
                 <div class="textDiv">
