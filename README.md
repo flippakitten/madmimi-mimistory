@@ -1,5 +1,5 @@
 # madmimi-mimistory
-Simple Tool to display Mad Mimi promotions on your PHP website
+Simple Tool to display your last 20 Mad Mimi promotions on your PHP website.
 
 ###Setup:
 1. Copy all files to folder location on the server (I will use "yoursite.com/mimi/" for refernce).
