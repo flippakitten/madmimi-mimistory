@@ -15,16 +15,14 @@
     $promotions = new SimpleXMLElement($mimi->Promotions());
     ?>
     <style type="text/css">
-            BODY{
-                font-family: sans-serif;
-                font-size:12px;
-                color:#c2c2c2;
-            }
             #promotionsDiv{
                 clear:both;
                 height:54px;
                 margin-left:10px;
                 margin-top:10px;
+                font-family: sans-serif;
+                font-size:12px;
+                color:#c2c2c2;
             }
             #promotionsDiv img{
                 height:44px; 
