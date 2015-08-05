@@ -8,8 +8,11 @@
     Author URI: http://www.flippakitten.com/
  */
 
+    // Include library to connect to Mad Mimi
     require('includes/MadMimi.class.php');
+    // Include connection settings
     require('includes/model-settings.php');
+    // Include colour css setup from setup.php
     include('includes/style-color.html');
     $mimi = new MadMimi($cleanUserName, $cleanApi_key);
     $promotions = new SimpleXMLElement($mimi->Promotions());
@@ -45,6 +48,7 @@
             }
         </style>
     <?php
+    // Loop to pull in promotions
     foreach ($promotions as $promotion) {
         if ($promotion['hidden'] == 'false'){
         ?>
